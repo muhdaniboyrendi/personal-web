@@ -42,7 +42,7 @@ const media = [
 </script>
 
 <template>
-  <footer class="p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-800">
+  <footer class="p-4 bg-white md:p-8 lg:p-10 dark:bg-slate-900">
   <div class="mx-auto max-w-screen-xl text-center">
     <p class="my-6 text-gray-500 dark:text-gray-400">Follow me:</p>
     <ul class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
