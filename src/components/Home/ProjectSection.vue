@@ -3,7 +3,7 @@ import ProjectCard from '../Projects/ProjectCard.vue';
 </script>
 
 <template>
-  <section class="bg-white dark:bg-slate-900">
+  <section>
     <div class="flex flex-wrap pt-36 pb-20 px-4 mx-auto max-w-screen-xl lg:pt-36 lg:pb-20">
 
       <div class="w-full mb-9">

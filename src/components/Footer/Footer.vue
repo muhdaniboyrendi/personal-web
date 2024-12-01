@@ -42,18 +42,18 @@ const media = [
 </script>
 
 <template>
-  <footer class="p-4 bg-white md:p-8 lg:p-10 dark:bg-slate-900">
-  <div class="mx-auto max-w-screen-xl text-center">
-    <p class="my-6 text-gray-500 dark:text-gray-400">Follow me:</p>
-    <ul class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
-      <SocialLink :url="media[0].url" :svg="media[0].svg" />
-      <SocialLink :url="media[1].url" :svg="media[1].svg" />
-      <SocialLink :url="media[2].url" :svg="media[2].svg" />
-      <SocialLink :url="media[3].url" :svg="media[3].svg" />
-      <SocialLink :url="media[4].url" :svg="media[4].svg" />
-      <SocialLink :url="media[5].url" :svg="media[5].svg" />
-    </ul>
-    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 Muhdani Boyrendi Erlan Azhari. Made with <a href="https://vuejs.org" class="text-green-600 hover:underline">Vue JS</a> and <a href="https://tailwindcss.com" class="text-sky-500 hover:underline">Tailwind CSS</a></span>
-  </div>
-</footer>
+  <footer class="p-4 md:p-8 lg:p-10">
+    <div class="mx-auto max-w-screen-xl text-center">
+      <p class="my-6 text-gray-500 dark:text-gray-400">Follow me:</p>
+      <ul class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
+        <SocialLink :url="media[0].url" :svg="media[0].svg" />
+        <SocialLink :url="media[1].url" :svg="media[1].svg" />
+        <SocialLink :url="media[2].url" :svg="media[2].svg" />
+        <SocialLink :url="media[3].url" :svg="media[3].svg" />
+        <SocialLink :url="media[4].url" :svg="media[4].svg" />
+        <SocialLink :url="media[5].url" :svg="media[5].svg" />
+      </ul>
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 Muhdani Boyrendi Erlan Azhari. Made with <a href="https://vuejs.org" class="text-green-600 hover:underline">Vue JS</a> and <a href="https://tailwindcss.com" class="text-sky-500 hover:underline">Tailwind CSS</a></span>
+    </div>
+  </footer>
 </template>
