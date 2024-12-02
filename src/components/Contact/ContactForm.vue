@@ -1,35 +1,16 @@
+<script setup>
+import FormInput from './FormInput.vue';
+</script>
+
 <template>
-  <form action="" class="w-full lg:w-1/2 p-5 rounded-2xl border border-slate-700">
-          <h3 class="text-xl mb-5 text-black dark:text-slate-100">Contact me</h3>
-          <label for="email-address-icon" class="block mb-2 text-sm font-medium text-gray-900 dark:text-slate-200">Your Email</label>
-          <div class="relative mb-3">
-            <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-              <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
-                <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
-                <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
-              </svg>
-            </div>
-            <input type="text" id="email-address-icon" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-black dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com">
-          </div>
-          <label for="email-address-icon" class="block mb-2 text-sm font-medium text-gray-900 dark:text-slate-200">Your Email</label>
-          <div class="relative mb-3">
-            <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-              <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
-                <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
-                <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
-              </svg>
-            </div>
-            <input type="text" id="email-address-icon" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-black dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com">
-          </div>
-          <label for="email-address-icon" class="block mb-2 text-sm font-medium text-gray-900 dark:text-slate-200">Your Email</label>
-          <div class="relative mb-3">
-            <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-              <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
-                <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
-                <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
-              </svg>
-            </div>
-            <input type="text" id="email-address-icon" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-black dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com">
-          </div>
-        </form>
+  <form action="erlanazrdev@gmail.com" method="get" class="w-full p-5 rounded-2xl border border-slate-700">
+    <h3 class="text-2xl mb-5 text-black dark:text-slate-100">Contact me</h3>
+    <FormInput title="Name" type="text" name="name" placeholder="Enter your name" />
+    <FormInput title="Email" type="email" name="email" placeholder="Enter your email" />
+    <div class="mb-5">
+      <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Message</label>
+      <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-xl border border-black focus:ring-blue-500 focus:border-blue-500 dark:bg-black dark:border-slate-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a message..."></textarea>
+    </div>
+    <button class="py-2 px-5 rounded-xl text-sky-500 border-2 border-sky-500 transition hover:bg-sky-500 hover:text-white dark:hover:text-black hover:shadow-md hover:shadow-sky-500">Send</button>
+  </form>
 </template>
