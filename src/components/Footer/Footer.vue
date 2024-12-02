@@ -53,7 +53,7 @@ const media = [
         <SocialLink :url="media[4].url" :svg="media[4].svg" />
         <SocialLink :url="media[5].url" :svg="media[5].svg" />
       </ul>
-      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 Muhdani Boyrendi Erlan Azhari. Made with <a href="https://vuejs.org" class="text-green-600 hover:underline">Vue JS</a> and <a href="https://tailwindcss.com" class="text-sky-500 hover:underline">Tailwind CSS</a></span>
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 Muhdani Boyrendi Erlan Azhari. Made with <a href="https://vuejs.org" target="_blank" class="text-green-600 hover:underline">Vue JS</a> and <a href="https://tailwindcss.com" target="_blank" class="text-sky-500 hover:underline">Tailwind CSS</a></span>
     </div>
   </footer>
 </template>

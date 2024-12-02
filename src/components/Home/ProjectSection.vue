@@ -11,9 +11,13 @@ import ProjectCard from '../Projects/ProjectCard.vue';
         <h3 class="font-semibold text-xl mt-4 dark:text-slate-200">Some laetst projects I have worked on</h3>
       </div>
 
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
+      <div class="w-full">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+        </div>
+      </div>
 
     </div>
   </section>

@@ -3,8 +3,8 @@ const projectPhoto = '/img/projects/project.jpg'
 </script>
 
 <template>
-  <div class="w-full mb-5 md:w-1/2 md:px-3 lg:w-1/3 lg:px-3">
-    <div class="bg-white border border-gray-200 rounded-2xl shadow-md dark:bg-black dark:border-gray-700 dark:shadow-slate-700 overflow-hidden hover:scale-95 transition group">
+  <div class="w-full">
+    <div class="bg-white border border-gray-200 rounded-2xl shadow-md dark:bg-black dark:border-gray-700 dark:hover:shadow-slate-700 overflow-hidden hover:scale-95 transition group">
       <img :src="projectPhoto" alt="Project" class="group-hover:scale-110 transition" />
       <div class="p-5">
         <a href="#">

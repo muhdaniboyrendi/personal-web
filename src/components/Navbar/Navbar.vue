@@ -26,8 +26,8 @@ const hamburgerMenu = () => {
         <ul class="font-medium flex flex-col mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
           <NavLink title="Home" url="/" />
           <NavLink title="About" url="/about" />
-          <NavLink title="Projects" />
-          <NavLink title="Equipments" />
+          <NavLink title="Projects" url="/projects" />
+          <NavLink title="Equipments" url="/equipments" />
           <NavLink title="Contact" />
         </ul>
       </div>
