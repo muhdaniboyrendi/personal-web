@@ -4,26 +4,32 @@ import ModeToggle from './ModeToggle.vue'
 import NavLink from './NavLink.vue'
 
 const hamburger = ref(null);
+const hamburgerTop = ref(null)
+const hamburgerMid = ref(null)
+const hamburgerBottom = ref(null)
 
 const hamburgerMenu = () => {
   hamburger.value.classList.toggle('hidden')
+  hamburgerTop.value.classList.toggle('rotate-45')
+  hamburgerBottom.value.classList.toggle('-rotate-45')
+  hamburgerMid.value.classList.toggle('w-0')
+  hamburgerMid.value.classList.toggle('w-6')
 }
 </script>
 
 <template>
-  <nav class="bg-white bg-opacity-70 backdrop-blur-md border-b border-b-slate-400 dark:bg-black dark:bg-opacity-70 dark:backdrop-blur-md dark:border-b-slate-700 fixed w-full z-20 top-0 start-0">
+  <nav class="bg-white bg-opacity-70 backdrop-blur-lg border-b border-b-slate-400 dark:bg-black dark:bg-opacity-70 dark:backdrop-blur-md dark:border-b-slate-700 fixed w-full z-20 top-0 start-0">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       
       <ModeToggle />
-      <button @click="hamburgerMenu" data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
+      <button @click="hamburgerMenu" data-collapse-toggle="navbar-default" type="button" class="block items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden focus:outline-none dark:text-gray-400" aria-controls="navbar-default" aria-expanded="false">
+        <span ref="hamburgerTop" class="border-b-2 border-slate-400 w-6 block mb-1.5 transition-all origin-top-left"></span>
+        <span ref="hamburgerMid" class="border-b-2 border-slate-400 w-6 block mb-1.5"></span>
+        <span ref="hamburgerBottom" class="border-b-2 border-slate-400 w-6 block mb-1.5 transition-all origin-bottom-left"></span>
       </button>
       
       <div ref="hamburger" class="hidden w-full md:block md:w-auto transition" id="navbar-default">
-        <ul class="font-medium flex flex-col mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
+        <ul class="font-medium flex flex-col mt-4 text-center md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
           <NavLink title="Home" url="/" />
           <NavLink title="About" url="/about" />
           <NavLink title="Projects" url="/projects" />

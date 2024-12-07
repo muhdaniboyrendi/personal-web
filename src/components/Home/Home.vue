@@ -29,7 +29,7 @@ const media = [
     </svg>`
   },
   {
-    url: 'erlanazrdev@gmail.com',
+    url: 'mailto:erlanazrdev@gmail.com',
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-envelope hover:text-sky-500 hover:scale-110 transition" viewBox="0 0 16 16">
       <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
     </svg>`
@@ -48,8 +48,8 @@ const media = [
     <div class="flex flex-wrap pb-40 pt-20 px-4 mx-auto max-w-screen-xl lg:py-28">
 
       <div class="lg:w-1/2 pt-12">
-        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-5xl dark:text-slate-100">Hi there,</h1>
-        <h1 class="mb-4 text-4xl font-bold tracking-tight leading-none text-sky-500 md:text-5xl lg:text-6xl">I'm Muhdani Boryendi Erlan Azhari</h1>
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-black md:text-5xl lg:text-5xl dark:text-white">Hi there,</h1>
+        <h1 class="mb-4 text-4xl font-bold tracking-tight leading-none text-sky-500 md:text-5xl lg:text-6xl">I'm Muhdani Boyrendi Erlan Azhari</h1>
         <p class=" mt-8 mb-8 ml-1 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Web Developer</p>
         <ul class="flex flex-wrap pl-1 mb-6 pt-3 text-gray-900 dark:text-white">
           <SocialLink :url="media[0].url" :svg="media[0].svg" />
