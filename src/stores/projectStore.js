@@ -41,7 +41,7 @@ export const useProjectStore = defineStore("project", {
         img: "projects/notes.PNG",
         tech: ["React JS", "Bootstrap"],
         source: "https://github.com/muhdaniboyrendi/personal-notes",
-        link: "#",
+        link: "https://personal-notes-tawny-five.vercel.app/",
       },
       {
         id: 5,
