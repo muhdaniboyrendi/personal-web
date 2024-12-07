@@ -1,5 +1,21 @@
 <script setup>
+import { useRouter } from 'vue-router'
+import { useProjectStore } from '@/stores/projectStore'
 import ProjectCard from './ProjectCard.vue';
+
+const publicPath = import.meta.env.BASE_URL
+const router = useRouter()
+const projectStore = useProjectStore()
+
+const goToDetail = (project) => {
+  projectStore.setSelectedProject(project)
+  router.push({
+    name: 'project-details',
+    params: { id: project.id }
+  })
+}
+
+const imagePaths = `${publicPath}img/`
 </script>
 
 <template>
@@ -12,9 +28,6 @@ import ProjectCard from './ProjectCard.vue';
       </div>
 
       <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
         <ProjectCard />
       </div>
 
