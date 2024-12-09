@@ -18,11 +18,11 @@ const imagePaths = `${publicPath}img/`
 </script>
 
 <template>
-  <section class="flex flex-wrap pt-36 pb-20 px-4 mx-auto max-w-screen-xl lg:pt-36 lg:pb-20">
+  <section class="flex flex-wrap py-28 px-4 mx-auto max-w-screen-xl">
 
-    <div class="w-full mb-9">
-      <h2 class="font-bold text-4xl text-sky-500">Projects</h2>
-      <h3 class="font-semibold text-xl mt-4 dark:text-slate-200">Some laetst projects I have worked on</h3>
+    <div class="w-full mb-10">
+      <h2 class="font-bold text-4xl text-sky-500 mb-10">Projects</h2>
+      <h3 class="font-semibold text-xl dark:text-slate-200">Some laetst projects I have worked on</h3>
     </div>
 
     <div class="w-full">

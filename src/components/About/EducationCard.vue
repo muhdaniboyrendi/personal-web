@@ -5,7 +5,7 @@
   
         <div class="flex justify-between">
           <h3 class="text-slate-700 dark:text-slate-300 text-2xl font-bold">SMKN 2 Karanganyar</h3>
-          <div class="py-0.5 px-3 bg-sky-100 border-sky-500 dark:bg-sky-900 rounded-xl border dark:border-sky-400">
+          <div class="py-0.5 px-3 bg-sky-100 border-sky-500 dark:bg-sky-900 rounded-xl border dark:border-sky-400 h-fit">
             <span class="text-sm text-sky-800 dark:text-sky-50">Past</span>
           </div>
         </div>

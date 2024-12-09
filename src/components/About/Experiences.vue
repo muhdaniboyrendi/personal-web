@@ -4,10 +4,10 @@ import ExperiencesCard from './ExperiencesCard.vue';
 
 <template>
   <section class="py-20">
-    <div class="flex flex-wrap py-4 mx-auto max-w-screen-xl lg:py-4">
+    <div class="flex flex-wrap mx-auto max-w-screen-xl">
 
       <div class="w-full">
-        <h2 class="font-bold text-3xl text-black dark:text-white">Experiences</h2>
+        <h2 class="font-bold text-3xl text-black dark:text-sky-500">Experiences</h2>
       </div>
 
       <ExperiencesCard />

@@ -44,7 +44,7 @@ const media = [
 </script>
 
 <template>
-  <section class="h-screen flex flex-wrap pb-40 pt-20 px-4 mx-auto max-w-screen-xl lg:py-28">
+  <section class="h-screen flex flex-wrap px-4 mx-auto max-w-screen-xl items-center">
 
     <div class="lg:w-1/2 pt-8">
       <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-black md:text-5xl lg:text-5xl dark:text-white">Hi there,</h1>

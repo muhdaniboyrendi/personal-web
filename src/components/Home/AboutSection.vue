@@ -1,9 +1,9 @@
 <template>
-  <section class="flex flex-wrap py-36 px-4 mx-auto max-w-screen-xl lg:py-36">
+  <section class="flex flex-wrap py-28 px-4 mx-auto max-w-screen-xl">
 
     <div class="w-full">
-      <h2 class="font-bold text-4xl text-sky-500">About me</h2>
-      <h3 class="font-semibold text-xl mt-4 dark:text-slate-200">A little description about me</h3>
+      <h2 class="font-bold text-4xl text-sky-500 mb-10">About me</h2>
+      <h3 class="font-semibold text-xl dark:text-slate-200">A little description about me</h3>
     </div>
 
     <div class="w-full lg:w-1/2 lg:pr-4">

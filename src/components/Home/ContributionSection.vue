@@ -15,15 +15,15 @@ onMounted(() => {
 
 
 <template>
-  <section class="w-full py-20 px-4">
-    <h2 class="font-bold text-4xl text-sky-500 mb-8">GitHub Stats</h2>
+  <section class="py-28 px-4 max-w-screen-xl mx-auto">
+    <h2 class="font-bold text-4xl text-sky-500 mb-10">GitHub Stats</h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
       <div>
         <img 
           :src="contributionGraphUrl" 
           alt="GitHub Contributions Graph" 
-          class="w-full rounded-lg shadow-md mb-3"
+          class="w-full rounded-lg shadow-md mb-10"
         >
         <img 
           :src="streakStatsUrl" 
