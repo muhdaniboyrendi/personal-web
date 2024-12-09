@@ -18,6 +18,9 @@ export default {
         fourth: '#90E0EF',
         fifth: '#CAF0F8',
       },
+      fontFamily: {
+        'comfortaa': 'Comfortaa'
+      }
     },
   },
   plugins: [require("flowbite/plugin")],

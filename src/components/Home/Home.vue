@@ -44,29 +44,27 @@ const media = [
 </script>
 
 <template>
-  <section>
-    <div class="flex flex-wrap pb-40 pt-20 px-4 mx-auto max-w-screen-xl lg:py-28">
+  <section class="h-screen flex flex-wrap pb-40 pt-20 px-4 mx-auto max-w-screen-xl lg:py-28">
 
-      <div class="lg:w-1/2 pt-12">
-        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-black md:text-5xl lg:text-5xl dark:text-white">Hi there,</h1>
-        <h1 class="mb-4 text-4xl font-bold tracking-tight leading-none text-sky-500 md:text-5xl lg:text-6xl">I'm Muhdani Boyrendi Erlan Azhari</h1>
-        <p class=" mt-8 mb-8 ml-1 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Web Developer</p>
-        <ul class="flex flex-wrap pl-1 mb-6 pt-3 text-gray-900 dark:text-white">
-          <SocialLink :url="media[0].url" :svg="media[0].svg" />
-          <SocialLink :url="media[1].url" :svg="media[1].svg" />
-          <SocialLink :url="media[2].url" :svg="media[2].svg" />
-          <SocialLink :url="media[3].url" :svg="media[3].svg" />
-          <SocialLink :url="media[4].url" :svg="media[4].svg" />
-          <SocialLink :url="media[5].url" :svg="media[5].svg" />
-        </ul>
-      </div>
-
-      <div class="w-full lg:w-1/2 flex justify-center">
-        <div class="relative bg-slate-200 mt-10 lg:mt-0 lg:right-0 rounded-full shadow-2xl shadow-sky-500 border-2 border-sky-500 overflow-hidden">
-          <img :src="profile" alt="My Photo" class="relative z-10 max-w-full ml-4 mx-auto h-[400px]">
-        </div>
-      </div>
-
+    <div class="lg:w-1/2 pt-8">
+      <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-black md:text-5xl lg:text-5xl dark:text-white">Hi there,</h1>
+      <h1 class="mb-4 text-4xl font-bold tracking-tight leading-none text-sky-500 md:text-5xl lg:text-6xl">I'm Muhdani Boyrendi Erlan Azhari</h1>
+      <p class=" mt-8 mb-8 ml-1 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Web Developer</p>
+      <ul class="flex flex-wrap pl-1 mb-6 pt-3 text-gray-900 dark:text-white">
+        <SocialLink :url="media[0].url" :svg="media[0].svg" />
+        <SocialLink :url="media[1].url" :svg="media[1].svg" />
+        <SocialLink :url="media[2].url" :svg="media[2].svg" />
+        <SocialLink :url="media[3].url" :svg="media[3].svg" />
+        <SocialLink :url="media[4].url" :svg="media[4].svg" />
+        <SocialLink :url="media[5].url" :svg="media[5].svg" />
+      </ul>
     </div>
+
+    <div class="w-full lg:w-1/2 flex justify-center">
+      <div class="relative bg-slate-200 mt-10 lg:mt-0 lg:right-0 rounded-full shadow-2xl shadow-sky-500 border-2 border-sky-500 overflow-hidden">
+        <img :src="profile" alt="My Photo" class="relative z-10 max-w-full ml-4 mx-auto h-[400px]">
+      </div>
+    </div>
+
   </section>
 </template>
