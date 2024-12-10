@@ -44,7 +44,7 @@ const media = [
 </script>
 
 <template>
-  <section class="h-screen flex flex-wrap px-4 pt-16 mx-auto max-w-screen-xl items-center">
+  <section class="min-h-screen flex flex-wrap px-4 pt-16 mx-auto max-w-screen-xl items-center">
 
     <div class="lg:w-1/2 pt-8">
       <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-black md:text-5xl lg:text-5xl dark:text-white">Hi there,</h1>
@@ -60,9 +60,9 @@ const media = [
       </ul>
     </div>
 
-    <div class="w-full lg:w-1/2 flex justify-center">
+    <div class="w-3/4 lg:w-1/2 mx-auto flex justify-center">
       <div class="relative bg-slate-200 mt-10 lg:mt-0 lg:right-0 rounded-full shadow-2xl shadow-sky-500 border-2 border-sky-500 overflow-hidden">
-        <img :src="profile" alt="My Photo" class="relative z-10 max-w-full ml-4 mx-auto h-[400px]">
+        <img :src="profile" alt="My Photo" class="relative z-10 max-w-full ml-4 mx-auto max-h-[400px]">
       </div>
     </div>
 

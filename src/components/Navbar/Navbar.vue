@@ -30,7 +30,7 @@ const hamburgerMenu = () => {
       <ModeToggle />
       <button @click="hamburgerMenu" data-collapse-toggle="navbar-default" type="button" class="block items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden focus:outline-none dark:text-gray-400" aria-controls="navbar-default" aria-expanded="false">
         <span ref="hamburgerTop" class="border-b-2 border-slate-400 w-6 block transition-all origin-top-left"></span>
-        <span ref="hamburgerMid" class="border-b-2 border-slate-400 w-4 block my-[0.38rem]"></span>
+        <span ref="hamburgerMid" class="border-b-2 border-slate-400 w-4 block my-[0.385rem]"></span>
         <span ref="hamburgerBottom" class="border-b-2 border-slate-400 w-6 block transition-all origin-bottom-left"></span>
       </button>
       

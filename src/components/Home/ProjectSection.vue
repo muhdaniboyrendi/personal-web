@@ -22,7 +22,8 @@ const imagePaths = `${publicPath}img/`
 
     <div class="w-full mb-10">
       <h2 class="font-bold text-4xl text-sky-500 mb-10">Projects</h2>
-      <h3 class="font-semibold text-xl dark:text-slate-200">Some laetst projects I have worked on</h3>
+      <h3 class="font-semibold text-xl dark:text-slate-200 mb-5">Some laetst projects I have worked on</h3>
+      <RouterLink to="/projects" class="text-slate-900 dark:text-slate-300 hover:text-sky-500 hover:underline dark:hover:text-sky-500">View All Projects &raquo;</RouterLink>
     </div>
 
     <div class="w-full">
