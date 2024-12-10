@@ -4,7 +4,7 @@ This is my personal website or portfolio website that I created to show my perso
 
 ## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/)=.
+[VSCode](https://code.visualstudio.com/)
 
 ## 🛠️ Tech Stack
 - **Frontend:** Vue.js 3
