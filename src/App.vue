@@ -1,7 +1,15 @@
 <script setup>
-import { RouterView } from 'vue-router'
+import { RouterView, useRoute } from 'vue-router'
+import { watchEffect } from 'vue';
 import Navbar from './components/Navbar/Navbar.vue'
 import Footer from './components/Footer/Footer.vue'
+
+const route = useRoute();
+
+watchEffect(() => {
+  const defaultTitle = 'Muhdani Boyrendi Erlan Azhari';
+  document.title = route.meta.title || defaultTitle;
+});
 </script>
 
 <template>

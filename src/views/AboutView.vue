@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import Education from '@/components/About/Education.vue';
 import Experiences from '@/components/About/Experiences.vue';
 import MainAbout from '@/components/About/MainAbout.vue';
