@@ -19,12 +19,10 @@ const imagePaths = `${publicPath}img/`
 
 <template>
   <div class="w-full" v-for="project in projectStore.projects" :key="project.id">
-    <div class="bg-white border border-gray-200 rounded-2xl shadow-md dark:bg-black dark:border-gray-700 dark:hover:shadow-slate-700 overflow-hidden hover:scale-95 transition group">
-      <img :src="imagePaths+ '/' +project.img" alt="Project" class="group-hover:scale-110 transition" />
+    <div class="bg-white border border-gray-200 rounded-2xl shadow-md dark:bg-black dark:border-gray-700 dark:hover:shadow-slate-700 overflow-hidden hover:scale-[99%] transition duration-500 group">
+      <img :src="imagePaths+ '/' +project.img" alt="Project" class="group-hover:scale-110 transition duration-500" />
       <div class="p-5">
-        <a href="#">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ project.title }}</h5>
-        </a>
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ project.title }}</h5>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ project.description }}</p>
         <button @click="goToDetail(project)" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-sky-500 border-2 border-sky-500 rounded-lg transition ease-in hover:bg-sky-500 hover:text-white hover:shadow-md hover:shadow-sky-500 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-black dark:hover:bg-sky-500 dark:focus:ring-blue-800">
           Read more
