@@ -37,8 +37,9 @@
       <div class="mt-5 text-slate-700 dark:text-slate-300">
         <ul>
           <li><span class="text-slate-800 dark:text-slate-200">• Laptop :</span> Lenovo Thinkpad X1 Carbon</li>
-          <li class="ml-3"><span class="text-slate-800 dark:text-slate-200">Specs :</span>
+          <li><span class="text-slate-800 dark:text-slate-200">• Specs :</span>
             <ul class="ml-3">
+              <li><span class="text-slate-800 dark:text-slate-200">• OS :</span> Windows 11 Pro</li>
               <li><span class="text-slate-800 dark:text-slate-200">• Processor :</span> Intel Core i5-8265U</li>
               <li><span class="text-slate-800 dark:text-slate-200">• RAM :</span> 8 GB</li>
               <li><span class="text-slate-800 dark:text-slate-200">• Storage :</span> NVMe 256 GB</li>

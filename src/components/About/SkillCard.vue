@@ -6,7 +6,7 @@ const skillDatas = [
   },
   {
     title: 'Frontend',
-    data: ['Vue JS', 'Tailwind CSS', 'Bootstrap', 'Livewire']
+    data: ['Nuxt', 'Vue.js', 'Tailwind CSS', 'Bootstrap', 'Livewire']
   },
   {
     title: 'Backend',
@@ -25,7 +25,7 @@ const skillDatas = [
 
       <div class="mt-5 text-slate-700 dark:text-slate-300">
         <ul>
-          <li v-for="skillDetail in skillData.data" :key="index">{{ skillDetail }}</li>
+          <li v-for="skillDetail in skillData.data" :key="index">- {{ skillDetail }}</li>
         </ul>
       </div>
 

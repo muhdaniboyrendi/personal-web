@@ -6,6 +6,16 @@ export const useProjectStore = defineStore("project", {
     projects: [
       {
         id: 1,
+        title: "EADev Invitation",
+        description:
+          "Website for ordering and managing wab based wedding invitation (under development).",
+        img: "projects/eadev-invitation.png",
+        tech: ["Nuxt", "Tailwind CSS"],
+        source: "https://github.com/muhdaniboyrendi/eadev-invitation",
+        link: "https://eadev-invitation.vercel.app/",
+      },
+      {
+        id: 2,
         title: "Wedding Invitation",
         description: "Website for wedding invitation.",
         img: "projects/wedding-invitation.png",
@@ -14,7 +24,7 @@ export const useProjectStore = defineStore("project", {
         link: "https://muhdaniboyrendi.github.io/wedding-invitation/",
       },
       {
-        id: 2,
+        id: 3,
         title: "Grasius",
         description:
           "Application for student management and attendance system with QR Code.",
@@ -24,7 +34,7 @@ export const useProjectStore = defineStore("project", {
         link: "#",
       },
       {
-        id: 3,
+        id: 4,
         title: "Online Shop",
         description:
           "Simple online shop application with admin and customer pages.",
@@ -34,7 +44,7 @@ export const useProjectStore = defineStore("project", {
         link: "#",
       },
       {
-        id: 4,
+        id: 5,
         title: "Note App",
         description:
           "Simple Notes App with features add, delete, archive, and search notes.",
@@ -44,7 +54,7 @@ export const useProjectStore = defineStore("project", {
         link: "https://personal-notes-tawny-five.vercel.app/",
       },
       {
-        id: 5,
+        id: 6,
         title: "Todo List App",
         description:
           "Simple Todo List App with featues add, delete, and done todo.",
