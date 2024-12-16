@@ -25,19 +25,19 @@ watchEffect(() => {
     <h2 class="font-bold text-4xl text-sky-500 mb-10">GitHub Stats</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-      <div class="w-full overflow-hidden mb-5 shadow-md rounded-2xl h-fit hover:border transition">
+      <div class="w-full overflow-hidden mb-5 shadow-md rounded-[2rem] h-fit hover:border transition">
         <img 
           :src="contributionGraphUrl" 
           alt="GitHub Contributions Graph" class="w-full scale-105"
         >
       </div>
-      <div class="w-full overflow-hidden mb-5 shadow-md rounded-2xl h-fit hover:border transition">
+      <div class="w-full overflow-hidden mb-5 shadow-md rounded-[2rem] h-fit hover:border transition">
         <img 
           :src="streakStatsUrl" 
           alt="GitHub Streak Stats" class="w-full scale-105"
         >
       </div>
-      <div class="w-full overflow-hidden mb-5 shadow-md rounded-2xl h-fit hover:border transition">
+      <div class="w-full overflow-hidden mb-5 shadow-md rounded-[2rem] h-fit hover:border transition">
         <img 
           :src="topLanguagesUrl" 
           alt="Top Languages" class="w-full scale-105"

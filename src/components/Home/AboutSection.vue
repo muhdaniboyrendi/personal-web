@@ -14,7 +14,7 @@
 
     <div class="w-full lg:w-1/2 lg:pl-4">
       <p class="pt-9 text-slate-800 dark:text-slate-400">
-        Now I am continuing to be a software enginner, espencially in web development. I have honed my skulls in several programming languages and frameworks, including <span class="text-sky-500">HTML</span>, <span class="text-sky-500">CSS</span>, <span class="text-sky-500">JavaScript</span>, <span class="text-sky-500">PHP</span>, <span class="text-sky-500">Bootstrap</span>, <span class="text-sky-500">Tailwind CSS</span>, <span class="text-sky-500">Vue JS</span>, and <span class="text-sky-500">Laravel</span>.
+        Now I am continuing to be a software enginner, espencially in web development. I have honed my skulls in several programming languages and frameworks, including <span class="text-sky-500">HTML</span>, <span class="text-sky-500">CSS</span>, <span class="text-sky-500">JavaScript</span>, <span class="text-sky-500">PHP</span>, <span class="text-sky-500">Bootstrap</span>, <span class="text-sky-500">Tailwind CSS</span>, <span class="text-sky-500">Nuxt</span>, <span class="text-sky-500">Vue.js</span>, and <span class="text-sky-500">Laravel</span>.
       </p>
     </div>
 

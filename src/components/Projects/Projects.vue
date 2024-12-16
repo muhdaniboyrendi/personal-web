@@ -27,7 +27,7 @@ const imagePaths = `${publicPath}img/`
         <h3 class="font-semibold text-xl mt-16 text-slate-500 dark:text-slate-300">Some projects I have worked on</h3>
       </div>
 
-      <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <ProjectCard />
       </div>
 
