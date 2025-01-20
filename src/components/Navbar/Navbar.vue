@@ -24,7 +24,7 @@ const hamburgerMenu = () => {
 </script>
 
 <template>
-  <nav class="bg-white bg-opacity-70 backdrop-blur-lg border-b border-b-slate-400 dark:bg-black dark:bg-opacity-70 dark:backdrop-blur-md dark:border-b-slate-700 fixed w-full z-20 top-0 start-0">
+  <nav class="bg-secondary_light bg-opacity-50 backdrop-blur-xl border-b border-b-border_light dark:bg-secondary_dark dark:bg-opacity-50 dark:backdrop-blur-xl dark:border-b-border_dark fixed w-full z-20 top-0 start-0 transition-colors">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       
       <ModeToggle />
@@ -34,7 +34,7 @@ const hamburgerMenu = () => {
         <span ref="hamburgerBottom" class="border-b-2 border-slate-400 w-6 block transition-all origin-bottom-left"></span>
       </button>
       
-      <div ref="hamburger" class="hidden w-full md:block md:w-auto transition" id="navbar-default">
+      <div ref="hamburger" class="hidden w-full md:block md:w-auto" id="navbar-default">
         <ul class="font-medium flex flex-col mt-4 text-center md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
           <NavLink title="Home" url="/" :active="getNavLinkClass('/')" />
           <NavLink title="About" url="/about" :active="getNavLinkClass('/about')" />
