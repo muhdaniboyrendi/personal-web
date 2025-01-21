@@ -123,7 +123,7 @@ onUnmounted(() => {
         <p
           :key="currentIndex"
           class="my-10
-           mx-auto lg:mx-0 font-semibold text-sm text-sky-500 lg:text-lg py-2 px-4 bg-sky-100 w-fit rounded-full border-2 border-sky-500 dark:bg-secondary_dark"
+           mx-auto lg:mx-0 font-semibold text-sm text-sky-500 lg:text-lg py-2 px-4 bg-sky-100 w-fit rounded-full border-2 border-sky-500 dark:bg-secondary_dark dark:text-primary_dark dark:border-primary_dark"
         >
           {{ currentProfesion }}
         </p>
