@@ -21,8 +21,6 @@ const props = defineProps({
   },
 });
 
-const sizeClasses = "md:w-80 md:h-80 lg:w-96 lg:h-96";
-
 const displayText = ref("");
 const isTyping = ref(false);
 
@@ -96,16 +94,16 @@ onUnmounted(() => {
 
 <template>
   <section
-    class="min-h-screen flex flex-wrap px-4 pt-16 mx-auto max-w-screen-xl items-center"
+    class="flex flex-wrap px-4 mt-20 mx-auto max-w-screen-xl items-center lg:py-10"
   >
-    <div class="lg:w-2/3 pt-8">
+    <div class="w-full lg:w-2/3 py-10 text-center lg:text-start">
       <h1
-        class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-text_primary_light md:text-5xl lg:text-4xl dark:text-text_primary_dark"
+        class="mb-4 text-2xl font-extrabold tracking-tight leading-none text-text_primary_light md:text-3xl lg:text-4xl dark:text-text_primary_dark"
       >
         Hi there,
       </h1>
       <h1
-        class="mb-4 text-4xl font-bold tracking-tight leading-none bg-gradient-to-r from-accent via-primary_light to-primary_light dark:via-primary_dark dark:to-primary_dark text-transparent bg-clip-text md:text-5xl lg:text-6xl"
+        class="mb-4 text-4xl font-bold tracking-tight leading-none bg-gradient-to-r from-accent via-primary_light to-primary_light dark:via-primary_dark dark:to-primary_dark text-transparent bg-clip-text md:text-5xl"
       >
         {{ displayText }}
         <span
@@ -124,12 +122,13 @@ onUnmounted(() => {
       >
         <p
           :key="currentIndex"
-          class="mt-8 mb-8 font-semibold text-sm text-sky-500 lg:text-lg py-2 px-4 bg-sky-100 w-fit rounded-full border-2 border-sky-500 dark:bg-secondary_dark"
+          class="my-10
+           mx-auto lg:mx-0 font-semibold text-sm text-sky-500 lg:text-lg py-2 px-4 bg-sky-100 w-fit rounded-full border-2 border-sky-500 dark:bg-secondary_dark"
         >
           {{ currentProfesion }}
         </p>
       </transition>
-      <ul class="flex flex-wrap pl-1 mb-6 pt-3 text-gray-900 dark:text-white">
+      <ul class="flex justify-center lg:justify-start pt-3 text-gray-900 dark:text-white">
         <SocialLink :url="media[0].url" :svg="media[0].svg" />
         <SocialLink :url="media[1].url" :svg="media[1].svg" />
         <SocialLink :url="media[2].url" :svg="media[2].svg" />
@@ -138,14 +137,10 @@ onUnmounted(() => {
       </ul>
     </div>
 
-    <div class="flex justify-center">
-      <div class="hexagon-wrapper" :class="sizeClasses">
-        <div
-          class="hexagon-shadow absolute top-8 left-1 w-80 h-80 rounded-full"
-        ></div>
-        <div
-          class="hexagon relative transition-all bg-white"
-        >
+    <div class="w-full lg:w-1/3 flex justify-center py-10">
+      <div class="hexagon-wrapper w-72 h-72 md:w-80 md:h-80 flex justify-center items-center">
+        <div class="hexagon-shadow absolute w-60 h-60 md:w-64 md:h-64 rounded-full"></div>
+        <div class="hexagon relative transition-all bg-white">
           <div class="absolute flex items-center justify-center">
             <img
               :src="profile"
