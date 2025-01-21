@@ -3,13 +3,13 @@ import { useRoute } from "vue-router";
 import { ref } from "vue";
 import ModeToggle from "./ModeToggle.vue";
 import NavLink from "./NavLink.vue";
-
+import MobileNavLink from "./MobileNavLink.vue";
 const route = useRoute();
 
 const getNavLinkClass = (routePath) =>
   route.path === routePath || route.path.startsWith(`${routePath}/`)
-    ? "bg-sky-500 bg-opacity-80"
-    : "bg-gray-800 dark:bg-slate-300";
+    ? "text-sky-500"
+    : "text-text_primary_light dark:text-text_primary_dark";
 
 const hamburger = ref(null);
 const hamburgerTop = ref(null);
@@ -30,10 +30,15 @@ const hamburgerMenu = () => {
     class="bg-secondary_light bg-opacity-50 backdrop-blur-xl border-b border-b-border_light dark:bg-secondary_dark dark:bg-opacity-50 dark:backdrop-blur-xl dark:border-b-border_dark fixed w-full z-20 top-0 start-0 transition-colors"
   >
     <div
-      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-6 py-3 md:py-0"
     >
-      <RouterLink to="/" class="text-white"> EA Dev </RouterLink>
-      <!-- <ModeToggle /> -->
+      <RouterLink
+        to="/"
+        class="font-bold text-text_primary_light dark:text-text_primary_dark"
+      >
+        EA Dev
+      </RouterLink>
+
       <button
         @click="hamburgerMenu"
         data-collapse-toggle="navbar-default"
@@ -61,140 +66,58 @@ const hamburgerMenu = () => {
         class="hidden w-full md:flex md:w-auto"
         id="navbar-default"
       >
-        <div class="flex justify-center gap-3 mt-3">
-          <RouterLink
-            to="/"
-            class="flex items-center w-1/2 max-w-52 text-center bg-gray-500 bg-opacity-20 p-3 rounded-full hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-sky-500 transition md:p-0 md:dark:hover:text-sky-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-          >
-            <div
-              class="flex justify-center items-center w-10 h-10 mr-2 rounded-full bg-opacity-20"
-              :class="getNavLinkClass('/')"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="currentColor"
-                class="bi bi-house-door-fill text-white"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"
-                />
-              </svg>
-            </div>
-            <span class="mt-1">Home</span>
-          </RouterLink>
-          <RouterLink
-            to="/about"
-            class="flex items-center w-1/2 max-w-52 text-center bg-gray-500 bg-opacity-20 p-3 rounded-full hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-sky-500 transition md:p-0 md:dark:hover:text-sky-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-          >
-            <div
-              class="flex justify-center items-center w-10 h-10 mr-2 rounded-full bg-opacity-20"
-              :class="getNavLinkClass('/about')"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="currentColor"
-                class="bi bi-info-circle-fill text-white"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"
-                />
-              </svg>
-            </div>
-            <span class="mt-1">About</span>
-          </RouterLink>
-        </div>
-        <div
-          class="p-5 bg-gray-500 bg-opacity-20 rounded-[2rem] flex items-center mt-3"
+        <MobileNavLink />
+        <ul
+          class="hidden font-medium md:flex text-center md:space-x-8 rtl:space-x-reverse md:mt-0"
         >
-          <RouterLink
-            to="/projects"
-            class="w-1/3 flex flex-wrap justify-center"
+          <NavLink title="Home" url="/" :active="getNavLinkClass('/')" />
+          <NavLink
+            title="About"
+            url="/about"
+            :active="getNavLinkClass('/about')"
+          />
+          <NavLink
+            title="Projects"
+            url="/projects"
+            :active="getNavLinkClass('/projects')"
+          />
+          <NavLink
+            title="Equipments"
+            url="/equipments"
+            :active="getNavLinkClass('/equipments')"
+          />
+          <NavLink
+            title="Contact"
+            url="/contact"
+            :active="getNavLinkClass('/contact')"
+          />
+        </ul>
+        <div class="hidden md:flex items-center ml-10">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-brightness-high text-slate-700 dark:text-slate-300"
+            viewBox="0 0 16 16"
           >
-            <div
-              class="flex justify-center items-center w-10 h-10 rounded-full bg-opacity-20"
-              :class="getNavLinkClass('/projects')"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="currentColor"
-                class="bi bi-kanban text-white"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M13.5 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm-11-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
-                />
-                <path
-                  d="M6.5 3a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1zm-4 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1zm8 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1z"
-                />
-              </svg>
-            </div>
-            <span class="w-full text-center mt-2">Projects</span>
-          </RouterLink>
-          <RouterLink
-            to="/equipments"
-            class="w-1/3 flex flex-wrap justify-center"
+            <path
+              d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"
+            />
+          </svg>
+          <ModeToggle class="mx-2" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-moon text-slate-700 dark:text-slate-300"
+            viewBox="0 0 16 16"
           >
-            <div
-              class="flex justify-center items-center w-10 h-10 rounded-full bg-opacity-20"
-              :class="getNavLinkClass('/equipments')"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="currentColor"
-                class="bi bi-tools text-white"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3q0-.405-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"
-                />
-              </svg>
-            </div>
-            <span class="w-full text-center mt-2">Equipments</span>
-          </RouterLink>
-          <RouterLink to="/contact" class="w-1/3 flex flex-wrap justify-center">
-            <div
-              class="flex justify-center items-center w-10 h-10 rounded-full bg-opacity-20"
-              :class="getNavLinkClass('/contact')"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="currentColor"
-                class="bi bi-person-rolodex text-white"
-                viewBox="0 0 16 16"
-              >
-                <path d="M8 9.05a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
-                <path
-                  d="M1 1a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h.5a.5.5 0 0 0 .5-.5.5.5 0 0 1 1 0 .5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5.5.5 0 0 1 1 0 .5.5 0 0 0 .5.5h.5a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H6.707L6 1.293A1 1 0 0 0 5.293 1zm0 1h4.293L6 2.707A1 1 0 0 0 6.707 3H15v10h-.085a1.5 1.5 0 0 0-2.4-.63C11.885 11.223 10.554 10 8 10c-2.555 0-3.886 1.224-4.514 2.37a1.5 1.5 0 0 0-2.4.63H1z"
-                />
-              </svg>
-            </div>
-            <span class="w-full text-center mt-2">Contact</span>
-          </RouterLink>
-        </div>
-        <!-- <ul class="font-medium flex flex-col mt-4 text-center md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0"> -->
-        <!-- <NavLink title="Home" url="/" :active="getNavLinkClass('/')" />
-          <NavLink title="About" url="/about" :active="getNavLinkClass('/about')" />
-          <NavLink title="Projects" url="/projects" :active="getNavLinkClass('/projects')" />
-          <NavLink title="Equipments" url="/equipments" :active="getNavLinkClass('/equipments')" />
-          <NavLink title="Contact" url="/contact" :active="getNavLinkClass('/contact')" /> -->
-        <!-- </ul> -->
-        <div
-          class="p-5 mt-3 bg-gray-500 bg-opacity-20 rounded-full flex justify-between"
-        >
-          <span class="ml-2 pt-1">Dark Mode</span>
-          <ModeToggle class="md:ml-20" />
+            <path
+              d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"
+            />
+          </svg>
         </div>
       </div>
     </div>
