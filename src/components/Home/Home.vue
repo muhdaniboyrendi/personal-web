@@ -1,5 +1,49 @@
 <script setup>
+import { onMounted, onUnmounted, ref } from "vue";
 import SocialLink from "../Footer/SocialLink.vue";
+
+const props = defineProps({
+  text: {
+    type: String,
+    default: "I'm Muhdani Boyrendi Erlan Azhari",
+  },
+  speed: {
+    type: Number,
+    default: 100,
+  },
+  size: {
+    type: String,
+    default: "md",
+  },
+  shadowColor: {
+    type: String,
+    default: "rgba(0, 0, 0, 0.2)",
+  },
+});
+
+const sizeClasses = "md:w-80 md:h-80 lg:w-96 lg:h-96";
+
+const displayText = ref("");
+const isTyping = ref(false);
+
+const typeText = async () => {
+  isTyping.value = true;
+  displayText.value = "";
+
+  for (let i = 0; i < props.text.length; i++) {
+    await new Promise((resolve) => setTimeout(resolve, props.speed));
+    displayText.value += props.text[i];
+  }
+
+  isTyping.value = false;
+};
+
+const profesion = ["Web Developer", "Tech Enthusiast"];
+
+const currentProfesion = ref(profesion[0]);
+const currentIndex = ref(0);
+
+let profesionInterval;
 
 const profile = "/img/profile.png";
 
@@ -8,12 +52,6 @@ const media = [
     url: "https://www.instagram.com/erlan.azr_?igsh=MTN3anUxNDZiZjA4MA==",
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-instagram hover:text-sky-500 hover:scale-110 transition" viewBox="0 0 16 16">
       <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-    </svg>`,
-  },
-  {
-    url: "https://www.threads.net/@erlan.azr_?invite=0",
-    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-threads hover:text-sky-500 hover:scale-110 transition" viewBox="0 0 16 16">
-      <path d="M6.321 6.016c-.27-.18-1.166-.802-1.166-.802.756-1.081 1.753-1.502 3.132-1.502.975 0 1.803.327 2.394.948s.928 1.509 1.005 2.644q.492.207.905.484c1.109.745 1.719 1.86 1.719 3.137 0 2.716-2.226 5.075-6.256 5.075C4.594 16 1 13.987 1 7.994 1 2.034 4.482 0 8.044 0 9.69 0 13.55.243 15 5.036l-1.36.353C12.516 1.974 10.163 1.43 8.006 1.43c-3.565 0-5.582 2.171-5.582 6.79 0 4.143 2.254 6.343 5.63 6.343 2.777 0 4.847-1.443 4.847-3.556 0-1.438-1.208-2.127-1.27-2.127-.236 1.234-.868 3.31-3.644 3.31-1.618 0-3.013-1.118-3.013-2.582 0-2.09 1.984-2.847 3.55-2.847.586 0 1.294.04 1.663.114 0-.637-.54-1.728-1.9-1.728-1.25 0-1.566.405-1.967.868ZM8.716 8.19c-2.04 0-2.304.87-2.304 1.416 0 .878 1.043 1.168 1.6 1.168 1.02 0 2.067-.282 2.232-2.423a6.2 6.2 0 0 0-1.528-.161"/>
     </svg>`,
   },
   {
@@ -41,13 +79,26 @@ const media = [
     </svg>`,
   },
 ];
+
+onMounted(() => {
+  typeText();
+
+  profesionInterval = setInterval(() => {
+    currentIndex.value = (currentIndex.value + 1) % profesion.length;
+    currentProfesion.value = profesion[currentIndex.value];
+  }, 4000);
+});
+
+onUnmounted(() => {
+  clearInterval(profesionInterval);
+});
 </script>
 
 <template>
   <section
     class="min-h-screen flex flex-wrap px-4 pt-16 mx-auto max-w-screen-xl items-center"
   >
-    <div class="lg:w-1/2 pt-8">
+    <div class="lg:w-2/3 pt-8">
       <h1
         class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-text_primary_light md:text-5xl lg:text-4xl dark:text-text_primary_dark"
       >
@@ -56,43 +107,84 @@ const media = [
       <h1
         class="mb-4 text-4xl font-bold tracking-tight leading-none bg-gradient-to-r from-accent via-primary_light to-primary_light dark:via-primary_dark dark:to-primary_dark text-transparent bg-clip-text md:text-5xl lg:text-6xl"
       >
-        I'm Muhdani Boyrendi Erlan Azhari
+        {{ displayText }}
+        <span
+          v-if="isTyping"
+          class="inline-block w-[2px] h-[1em] bg-text_primary_light dark:bg-text_primary_dark ml-1 animate-blink"
+        ></span>
       </h1>
-      <p
-        class="flex items-center mt-8 mb-8 font-semibold text-sm text-sky-500 lg:text-lg py-2 px-3 bg-sky-100 w-fit rounded-full border-2 border-sky-500 dark:bg-secondary_dark hover:text-accent hover:border-accent hover:bg-secondary_light hover:shadow-md hover:shadow-text_secondary_light dark:hover:shadow-accent hover:-translate-y-1 transition"
+      <transition
+        mode="out-in"
+        enter-active-class="transition duration-500 ease-out"
+        enter-from-class="transform -translate-y-4 opacity-0"
+        enter-to-class="transform translate-y-0 opacity-100"
+        leave-active-class="transition duration-500 ease-in"
+        leave-from-class="transform translate-y-0 opacity-100"
+        leave-to-class="transform translate-y-4 opacity-0"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          class="bi bi-globe2 mr-2 w-5 h-5 md:w-6 md:h-6"
-          viewBox="0 0 16 16"
+        <p
+          :key="currentIndex"
+          class="mt-8 mb-8 font-semibold text-sm text-sky-500 lg:text-lg py-2 px-4 bg-sky-100 w-fit rounded-full border-2 border-sky-500 dark:bg-secondary_dark"
         >
-          <path
-            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855q-.215.403-.395.872c.705.157 1.472.257 2.282.287zM4.249 3.539q.214-.577.481-1.078a7 7 0 0 1 .597-.933A7 7 0 0 0 3.051 3.05q.544.277 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9 9 0 0 1-1.565-.667A6.96 6.96 0 0 0 1.018 7.5zm1.4-2.741a12.3 12.3 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332M8.5 5.09V7.5h2.99a12.3 12.3 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.6 13.6 0 0 1 7.5 10.91V8.5zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741zm-3.282 3.696q.18.469.395.872c.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a7 7 0 0 1-.598-.933 9 9 0 0 1-.481-1.079 8.4 8.4 0 0 0-1.198.49 7 7 0 0 0 2.276 1.522zm-1.383-2.964A13.4 13.4 0 0 1 3.508 8.5h-2.49a6.96 6.96 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667m6.728 2.964a7 7 0 0 0 2.275-1.521 8.4 8.4 0 0 0-1.197-.49 9 9 0 0 1-.481 1.078 7 7 0 0 1-.597.933M8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855q.216-.403.395-.872A12.6 12.6 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.96 6.96 0 0 0 14.982 8.5h-2.49a13.4 13.4 0 0 1-.437 3.008M14.982 7.5a6.96 6.96 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008zM11.27 2.461q.266.502.482 1.078a8.4 8.4 0 0 0 1.196-.49 7 7 0 0 0-2.275-1.52c.218.283.418.597.597.932m-.488 1.343a8 8 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"
-          />
-        </svg>
-        Web Developer
-      </p>
+          {{ currentProfesion }}
+        </p>
+      </transition>
       <ul class="flex flex-wrap pl-1 mb-6 pt-3 text-gray-900 dark:text-white">
         <SocialLink :url="media[0].url" :svg="media[0].svg" />
         <SocialLink :url="media[1].url" :svg="media[1].svg" />
         <SocialLink :url="media[2].url" :svg="media[2].svg" />
         <SocialLink :url="media[3].url" :svg="media[3].svg" />
         <SocialLink :url="media[4].url" :svg="media[4].svg" />
-        <SocialLink :url="media[5].url" :svg="media[5].svg" />
       </ul>
     </div>
 
-    <div class="w-3/4 lg:w-1/2 mx-auto flex justify-center">
-      <div
-        class="relative bg-slate-200 mt-10 lg:mt-0 lg:right-0 rounded-full shadow-2xl shadow-sky-500 border-2 border-sky-500 overflow-hidden"
-      >
-        <img
-          :src="profile"
-          alt="My Photo"
-          class="relative z-10 max-w-full ml-4 mx-auto max-h-[400px]"
-        />
+    <div class="flex justify-center">
+      <div class="hexagon-wrapper" :class="sizeClasses">
+        <div
+          class="hexagon-shadow absolute top-8 left-1 w-80 h-80 rounded-full"
+        ></div>
+        <div
+          class="hexagon relative transition-all bg-white"
+        >
+          <div class="absolute flex items-center justify-center">
+            <img
+              :src="profile"
+              alt="My Photo"
+              class="ml-4 -mt-12 scale-105"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </section>
 </template>
+
+<style scoped>
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}
+
+.hexagon-wrapper {
+  position: relative;
+}
+
+.hexagon {
+  width: 85%;
+  height: 100%;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hexagon-shadow {
+  box-shadow: 0 0 100px 50px #3b9ac7;
+}
+</style>
