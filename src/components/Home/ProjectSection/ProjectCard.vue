@@ -1,15 +1,32 @@
 <script setup>
-const props = defineProps(['imagePath', 'projectId', 'projectImg', 'projectTitle', 'projectDescription'])
+import { useProjectStore } from '@/stores/projectStore';
+import { useRouter } from 'vue-router';
+
+const router = useRouter()
+const projectStore = useProjectStore()
+
+const props = defineProps(['projectId', 'projectImg', 'projectTitle', 'projectDescription'])
+
+const publicPath = import.meta.env.BASE_URL;
+const imagePath = `${publicPath}img/`;
+
+const goToDetail = (project) => {
+  projectStore.setSelectedProject(project);
+  router.push({
+    name: "project-details",
+    params: { id: project.id },
+  });
+};
 </script>
 
 <template>
   <div class="w-full">
     <div
-      class="bg-white border border-border_light dark:border-border_dark rounded-[2rem] p-4 shadow-md shadow-gray-300 dark:shadow-gray-800 dark:bg-surface_dark overflow-hidden transition duration-500 group"
+      class="bg-white border border-border_light dark:border-border_dark rounded-[2rem] p-4 dark:bg-surface_dark shadow-md overflow-hidden transition duration-500 group"
     >
       <div class="rounded-2xl overflow-hidden">
         <img
-          :src="props.imagePath + '/' + props.projectImg"
+          :src="imagePath + '/' + props.projectImg"
           alt="Project"
           class="group-hover:scale-105 group-hover:blur-sm transition duration-500"
         />

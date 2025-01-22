@@ -1,21 +1,8 @@
 <script setup>
-import { useRouter } from "vue-router";
 import { useProjectStore } from "@/stores/projectStore";
 import ProjectCard from "./ProjectCard.vue";
 
-const publicPath = import.meta.env.BASE_URL;
-const router = useRouter();
 const projectStore = useProjectStore();
-
-const goToDetail = (project) => {
-  projectStore.setSelectedProject(project);
-  router.push({
-    name: "project-details",
-    params: { id: project.id },
-  });
-};
-
-const imagePath = `${publicPath}img/`;
 </script>
 
 <template>
@@ -36,27 +23,31 @@ const imagePath = `${publicPath}img/`;
     <div class="w-full">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <ProjectCard
-          :image-path="imagePath"
           :project-id="projectStore.projects[0]"
           :project-img="projectStore.projects[0].img"
           :project-title="projectStore.projects[0].title"
           :project-description="projectStore.projects[0].description"
         />
         <ProjectCard
-          :image-path="imagePath"
           :project-id="projectStore.projects[1]"
           :project-img="projectStore.projects[1].img"
           :project-title="projectStore.projects[1].title"
           :project-description="projectStore.projects[1].description"
         />
         <ProjectCard
-          :image-path="imagePath"
           :project-id="projectStore.projects[2]"
           :project-img="projectStore.projects[2].img"
           :project-title="projectStore.projects[2].title"
           :project-description="projectStore.projects[2].description"
         />
       </div>
+    </div>
+
+    <div class="w-full mt-6 flex justify-center">
+      <RouterLink to="/projects" class="w-full flex justify-center items-center px-5 py-2 font-bold bg-secondary_light text-primary_light border-2 border-primary_light rounded-full transition ease-in hover:bg-primary_light hover:text-surface_light dark:bg-secondary_dark dark:border-primary_dark dark:hover:bg-primary_dark">
+        <i class="bi bi-box-arrow-up-right mr-2"></i>
+        View all projects
+      </RouterLink>
     </div>
   </section>
 </template>
