@@ -78,6 +78,31 @@ const media = [
   },
 ];
 
+const isHovered = ref(false);
+
+const menuItems = [
+  {
+    icon: `<i class="bi bi-instagram"></i>`,
+    label: "Instagram",
+  },
+  {
+    icon: `<i class="bi bi-github"></i>`,
+    label: "Github",
+  },
+  {
+    icon: `<i class="bi bi-linkedin"></i>`,
+    label: "Linkedin",
+  },
+  {
+    icon: `<i class="bi bi-envelope-at-fill"></i>`,
+    label: "Email",
+  },
+  {
+    icon: `<i class="bi bi-whatsapp"></i>`,
+    label: "WhatsApp",
+  },
+];
+
 onMounted(() => {
   typeText();
 
@@ -111,42 +136,67 @@ onUnmounted(() => {
           class="inline-block w-[2px] h-[1em] bg-text_primary_light dark:bg-text_primary_dark ml-1 animate-blink"
         ></span>
       </h1>
-      <transition
-        mode="out-in"
-        enter-active-class="transition duration-500 ease-out"
-        enter-from-class="transform -translate-y-4 opacity-0"
-        enter-to-class="transform translate-y-0 opacity-100"
-        leave-active-class="transition duration-500 ease-in"
-        leave-from-class="transform translate-y-0 opacity-100"
-        leave-to-class="transform translate-y-4 opacity-0"
-      >
-        <p
-          :key="currentIndex"
-          class="my-10
-           mx-auto lg:mx-0 font-semibold text-sm text-sky-500 lg:text-lg py-2 px-4 bg-sky-100 w-fit rounded-full border-2 border-sky-500 dark:bg-secondary_dark dark:text-primary_dark dark:border-primary_dark"
+
+      <div
+        class="relative flex items-center mx-auto lg:mx-0 py-1.5 px-3 mt-16 bg-slate-300 dark:bg-gray-800 rounded-full w-fit"
         >
-          {{ currentProfesion }}
-        </p>
-      </transition>
-      <ul class="flex justify-center lg:justify-start pt-3 text-gray-900 dark:text-white">
-        <SocialLink :url="media[0].url" :svg="media[0].svg" />
-        <SocialLink :url="media[1].url" :svg="media[1].svg" />
-        <SocialLink :url="media[2].url" :svg="media[2].svg" />
-        <SocialLink :url="media[3].url" :svg="media[3].svg" />
-        <SocialLink :url="media[4].url" :svg="media[4].svg" />
-      </ul>
+        <!-- Main Menu Button -->
+        <button
+          @click="isHovered = !isHovered"
+          class="social-media-button bg-secondary_light dark:bg-secondary_dark w-8 h-8 text-sky-500 hover:text-accent transition rounded-full scale-125 mr-3"
+        >
+          <i class="bi bi-person-fill"></i>
+        </button>
+
+        <!-- Expandable Menu Items -->
+        <div
+          class="flex gap-2 transition-all duration-300"
+          :class="[
+            isHovered
+              ? 'opacity-100 translate-x-0'
+              : 'opacity-0 -translate-x-4 pointer-events-none',
+          ]"
+        >
+          <a
+            v-for="(item, index) in menuItems"
+            :key="index"
+            class="p-2 mt-1 text-sky-500 hover:text-accent rounded-full border-sky-500 transition scale-125"
+            :title="item.label"
+          >
+            <span v-html="item.icon"></span>
+          </a>
+        </div>
+
+        <transition
+          mode="out-in"
+          enter-active-class="transition duration-500 ease-out"
+          enter-from-class="transform -translate-y-4 opacity-0"
+          enter-to-class="transform translate-y-0 opacity-100"
+          leave-active-class="transition duration-500 ease-in"
+          leave-from-class="transform translate-y-0 opacity-100"
+          leave-to-class="transform translate-y-4 opacity-0"
+        >
+          <p
+            v-if="!isHovered"
+            :key="currentIndex"
+            class="absolute right-2 font-semibold text-lg text-sky-500 py-1.5 px-3 bg-secondary_light w-fit rounded-full dark:bg-secondary_dark dark:text-primary_dark dark:border-primary_dark"
+          >
+            {{ currentProfesion }}
+          </p>
+        </transition>
+      </div>
     </div>
 
     <div class="w-full lg:w-1/3 flex justify-center py-10">
-      <div class="hexagon-wrapper w-72 h-72 md:w-80 md:h-80 flex justify-center items-center">
-        <div class="hexagon-shadow absolute w-60 h-60 md:w-64 md:h-64 rounded-full"></div>
+      <div
+        class="hexagon-wrapper w-72 h-72 md:w-80 md:h-80 flex justify-center items-center"
+      >
+        <div
+          class="hexagon-shadow absolute w-60 h-60 md:w-64 md:h-64 rounded-full"
+        ></div>
         <div class="hexagon relative transition-all bg-white">
           <div class="absolute flex items-center justify-center">
-            <img
-              :src="profile"
-              alt="My Photo"
-              class="ml-4 -mt-12 scale-105"
-            />
+            <img :src="profile" alt="My Photo" class="ml-4 -mt-12 scale-105" />
           </div>
         </div>
       </div>
@@ -167,6 +217,27 @@ onUnmounted(() => {
 
 .animate-blink {
   animation: blink 1s infinite;
+}
+
+@keyframes shadow-pulse {
+  0% {
+    box-shadow: 0 0 0px 0px currentColor;
+  }
+  50% {
+    box-shadow: 0 0 5px 2px currentColor;
+  }
+  100% {
+    box-shadow: 0 0 0px 0px currentColor;
+  }
+}
+
+.social-media-button {
+  @apply text-[#4CB9E7];
+  animation: shadow-pulse 2s ease-in-out infinite;
+}
+
+.social-media-button:hover {
+  @apply text-[#FF9B50];
 }
 
 .hexagon-wrapper {

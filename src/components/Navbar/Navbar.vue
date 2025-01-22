@@ -4,6 +4,7 @@ import { ref } from "vue";
 import ModeToggle from "./ModeToggle.vue";
 import NavLink from "./NavLink.vue";
 import MobileNavLink from "./MobileNavLink.vue";
+
 const route = useRoute();
 
 const getNavLinkClass = (routePath) =>
