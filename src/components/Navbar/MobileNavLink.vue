@@ -11,7 +11,7 @@ const getNavLinkClass = (routePath) =>
 </script>
 
 <template>
-  <div class="flex justify-center gap-3 mt-5 max-w-md mx-auto md:hidden">
+  <div class="flex justify-center gap-4 mt-5 max-w-md mx-auto md:hidden">
     <RouterLink
       to="/"
       class="flex items-center w-1/2 text-center bg-gray-500 bg-opacity-20 p-3 rounded-full md:hover:bg-transparent md:border-0 md:hover:text-sky-500 transition md:p-0 md:dark:hover:text-sky-500 md:dark:hover:bg-transparent"
@@ -60,7 +60,7 @@ const getNavLinkClass = (routePath) =>
     </RouterLink>
   </div>
   <div
-    class="py-6 bg-gray-500 bg-opacity-20 rounded-[2rem] flex items-center mt-3 max-w-md mx-auto md:hidden"
+    class="py-6 bg-gray-500 bg-opacity-20 rounded-[2rem] flex items-center mt-4 max-w-md mx-auto md:hidden"
   >
     <RouterLink to="/projects" class="w-1/3 flex flex-wrap justify-center mt-1">
       <div
@@ -137,7 +137,7 @@ const getNavLinkClass = (routePath) =>
     </RouterLink>
   </div>
   <div
-    class="p-3 mt-3 mb-3 bg-gray-500 bg-opacity-20 rounded-full flex items-center justify-between max-w-md mx-auto md:hidden"
+    class="p-3 mt-4 mb-3 bg-gray-500 bg-opacity-20 rounded-full flex items-center justify-between max-w-md mx-auto md:hidden"
   >
     <div class="flex items-center">
       <div
