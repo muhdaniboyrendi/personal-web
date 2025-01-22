@@ -11,7 +11,7 @@ const getNavLinkClass = (routePath) =>
 </script>
 
 <template>
-  <div class="flex justify-center gap-3 mt-3 max-w-md mx-auto md:hidden">
+  <div class="flex justify-center gap-3 mt-5 max-w-md mx-auto md:hidden">
     <RouterLink
       to="/"
       class="flex items-center w-1/2 text-center bg-gray-500 bg-opacity-20 p-3 rounded-full md:hover:bg-transparent md:border-0 md:hover:text-sky-500 transition md:p-0 md:dark:hover:text-sky-500 md:dark:hover:bg-transparent"
@@ -33,7 +33,7 @@ const getNavLinkClass = (routePath) =>
           />
         </svg>
       </div>
-      <span class="mt-1 dark:text-text_secondary_dark">Home</span>
+      <span class="mt-1 dark:text-text_secondary_dark text-xs">Home</span>
     </RouterLink>
     <RouterLink
       to="/about"
@@ -56,7 +56,7 @@ const getNavLinkClass = (routePath) =>
           />
         </svg>
       </div>
-      <span class="mt-1 dark:text-text_secondary_dark">About</span>
+      <span class="mt-1 dark:text-text_secondary_dark text-xs">About</span>
     </RouterLink>
   </div>
   <div
@@ -83,7 +83,7 @@ const getNavLinkClass = (routePath) =>
           />
         </svg>
       </div>
-      <span class="w-full text-center mt-2 dark:text-text_secondary_dark"
+      <span class="w-full text-center text-xs mt-2 dark:text-text_secondary_dark"
         >Projects</span
       >
     </RouterLink>
@@ -108,7 +108,7 @@ const getNavLinkClass = (routePath) =>
           />
         </svg>
       </div>
-      <span class="w-full text-center mt-2 dark:text-text_secondary_dark"
+      <span class="w-full text-center text-xs mt-2 dark:text-text_secondary_dark"
         >Equipments</span
       >
     </RouterLink>
@@ -131,7 +131,7 @@ const getNavLinkClass = (routePath) =>
           />
         </svg>
       </div>
-      <span class="w-full text-center mt-2 dark:text-text_secondary_dark"
+      <span class="w-full text-center text-xs mt-2 dark:text-text_secondary_dark"
         >Contact</span
       >
     </RouterLink>
@@ -156,7 +156,7 @@ const getNavLinkClass = (routePath) =>
           />
         </svg>
       </div>
-      <span class="mt-1 dark:text-text_secondary_dark">Dark Mode</span>
+      <span class="mt-1 dark:text-text_secondary_dark text-xs">Dark Mode</span>
     </div>
     <ModeToggle class="mr-3 md:ml-20" />
   </div>

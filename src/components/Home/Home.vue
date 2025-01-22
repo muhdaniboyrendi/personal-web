@@ -1,6 +1,5 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from "vue";
-import SocialLink from "../Footer/SocialLink.vue";
 
 const props = defineProps({
   text: {
