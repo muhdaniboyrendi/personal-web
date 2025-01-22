@@ -137,7 +137,7 @@ const getNavLinkClass = (routePath) =>
     </RouterLink>
   </div>
   <div
-    class="p-3 mt-4 mb-3 bg-gray-500 bg-opacity-20 rounded-full flex items-center justify-between max-w-md mx-auto md:hidden"
+    class="p-3 mt-4 mb-1 bg-gray-500 bg-opacity-20 rounded-full flex items-center justify-between max-w-md mx-auto md:hidden"
   >
     <div class="flex items-center">
       <div

@@ -16,6 +16,7 @@ const hamburger = ref(null);
 const hamburgerTop = ref(null);
 const hamburgerMid = ref(null);
 const hamburgerBottom = ref(null);
+const bottomNav = ref('')
 
 const hamburgerMenu = () => {
   hamburger.value.classList.toggle("hidden");
@@ -23,21 +24,23 @@ const hamburgerMenu = () => {
   hamburgerBottom.value.classList.toggle("-rotate-45");
   hamburgerMid.value.classList.toggle("w-0");
   hamburgerMid.value.classList.toggle("w-4");
+  bottomNav.value.classList.toggle("rounded-b-[2.5rem]");
 };
 </script>
 
 <template>
   <nav
-    class="bg-secondary_light bg-opacity-50 backdrop-blur-xl border-b border-b-border_light dark:bg-secondary_dark dark:bg-opacity-50 dark:backdrop-blur-xl dark:border-b-border_dark fixed w-full z-20 top-0 start-0 transition-colors"
+    ref="bottomNav"
+    class="bg-secondary_light bg-opacity-50 backdrop-blur-xl dark:bg-secondary_dark dark:bg-opacity-50 dark:backdrop-blur-xl fixed w-full z-20 top-0 transition-colors md:rounded-none"
   >
     <div
-      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-6 py-3 md:py-0"
+      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 md:px-6 py-3 md:py-2"
     >
       <RouterLink
         to="/"
-        class="font-bold text-text_primary_light dark:text-text_primary_dark"
+        class="font-bold text-2xl italic text-text_primary_light dark:text-text_primary_dark"
       >
-        EA Dev
+        EA
       </RouterLink>
 
       <button
@@ -50,15 +53,15 @@ const hamburgerMenu = () => {
       >
         <span
           ref="hamburgerTop"
-          class="border-t-2 border-slate-400 w-6 block transition-all origin-top-left"
+          class="border-t-2 border-slate-600 dark:border-slate-300 w-6 block transition-all origin-top-left"
         ></span>
         <span
           ref="hamburgerMid"
-          class="border-t border-b border-slate-400 w-4 block my-[0.4rem]"
+          class="border-t border-b border-slate-600 dark:border-slate-300 w-4 block my-[0.4rem]"
         ></span>
         <span
           ref="hamburgerBottom"
-          class="border-b-2 border-slate-400 w-6 block transition-all origin-bottom-left"
+          class="border-b-2 border-slate-600 dark:border-slate-300 w-6 block transition-all origin-bottom-left"
         ></span>
       </button>
 
