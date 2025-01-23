@@ -1,34 +1,21 @@
 <script setup>
-const skillDatas = [
-  {
-    title: 'Languages',
-    data: ['HTML', 'CSS', 'JavaScript', 'PHP']
-  },
-  {
-    title: 'Frontend',
-    data: ['Nuxt', 'Vue.js', 'Tailwind CSS', 'Bootstrap', 'Livewire']
-  },
-  {
-    title: 'Backend',
-    data: ['Laravel', 'MySQL', 'SQLite']
-  },
-]
+const props = defineProps(["title", "data"]);
 </script>
 
 <template>
-  <div class="w-full" v-for="skillData in skillDatas" :key="index">
-    <div class="p-5 rounded-[2rem] border border-slate-300 dark:border-slate-700 hover:shadow-lg hover:shadow-slate-400 dark:hover:shadow-slate-700 transition duration-500">
+  <div
+    class="p-5 rounded-[2rem] shadow-md bg-gradient-to-b from-surface_light to-secondary_light dark:from-surface_dark dark:to-secondary_dark hover:shadow-lg transition duration-500"
+  >
+    <h4
+      class="text-text_primary_light dark:text-text_primary_dark md:text-lg font-bold"
+    >
+      {{ props.title }}
+    </h4>
 
-      <div>
-        <h3 class="text-slate-700 dark:text-slate-300 text-xl font-bold">{{ skillData.title }}</h3>
-      </div>
-
-      <div class="mt-5 text-slate-700 dark:text-slate-300">
-        <ul>
-          <li v-for="skillDetail in skillData.data" :key="index">- {{ skillDetail }}</li>
-        </ul>
-      </div>
-
+    <div class="mt-5 text-sm text-text_secondary_light dark:text-text_secondary_dark">
+      <ul>
+        <li v-for="(item, index) in props.data" :key="index" class="mb-1">- {{ item }}</li>
+      </ul>
     </div>
   </div>
 </template>

@@ -22,7 +22,7 @@ const goToDetail = (project) => {
 <template>
   <div class="w-full">
     <div
-      class="bg-white border border-border_light dark:border-border_dark rounded-[2rem] p-4 dark:bg-surface_dark shadow-md overflow-hidden transition duration-500 group"
+      class="bg-white rounded-[2rem] p-4 dark:bg-gradient-to-b dark:from-surface_dark dark:to-secondary_dark shadow-md hover:shadow-lg overflow-hidden transition duration-500 group"
     >
       <div class="rounded-2xl overflow-hidden">
         <img

@@ -24,7 +24,7 @@ export default {
         text_primary_dark: "#E6E6E6",
         text_secondary_dark: "#B0B0B0",
         surface_dark: "#2D2D2D",
-        border_dark: "#404040", 
+        border_dark: "#404040",
       },
       fontFamily: {
         comfortaa: "Comfortaa",
