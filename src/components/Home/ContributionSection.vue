@@ -26,7 +26,7 @@ onMounted(() => {
 
 <template>
   <section class="pt-20 px-4 max-w-screen-xl mx-auto">
-    <h2 class="font-bold text-xl md:text-2xl lg:text-3xl text-text_primary_light dark:text-text_primary_dark mb-10">GitHub Stats</h2>
+    <h2 class="font-bold text-xl md:text-2xl lg:text-3xl text-text_primary_light dark:text-text_primary_dark mb-5">GitHub Stats</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <div class="w-full overflow-hidden rounded-[2rem] h-fit border border-border_light dark:border-border_dark transition">

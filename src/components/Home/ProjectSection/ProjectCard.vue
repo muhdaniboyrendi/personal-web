@@ -1,11 +1,16 @@
 <script setup>
-import { useProjectStore } from '@/stores/projectStore';
-import { useRouter } from 'vue-router';
+import { useProjectStore } from "@/stores/projectStore";
+import { useRouter } from "vue-router";
 
-const router = useRouter()
-const projectStore = useProjectStore()
+const router = useRouter();
+const projectStore = useProjectStore();
 
-const props = defineProps(['projectId', 'projectImg', 'projectTitle', 'projectDescription'])
+const props = defineProps([
+  "projectId",
+  "projectImg",
+  "projectTitle",
+  "projectDescription",
+]);
 
 const publicPath = import.meta.env.BASE_URL;
 const imagePath = `${publicPath}img/`;
@@ -22,7 +27,7 @@ const goToDetail = (project) => {
 <template>
   <div class="w-full">
     <div
-      class="bg-white rounded-[2rem] p-4 dark:bg-gradient-to-b dark:from-surface_dark dark:to-secondary_dark shadow-md hover:shadow-lg overflow-hidden transition duration-500 group"
+      class="rounded-[2rem] p-4 bg-gradient-to-b from-surface_light to bg-secondary_light dark:from-surface_dark dark:to-secondary_dark shadow-md hover:shadow-lg overflow-hidden transition duration-500 group"
     >
       <div class="rounded-2xl overflow-hidden">
         <img
@@ -33,21 +38,34 @@ const goToDetail = (project) => {
       </div>
       <div class="mt-4">
         <h5
-          class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white"
+          class="mb-2 text-base md:text-lg font-bold tracking-tight text-gray-900 dark:text-white"
         >
           {{ props.projectTitle }}
         </h5>
-        <p class="mb-5 font-light text-sm text-gray-700 dark:text-gray-400">
+        <p class="mb-5 font-light text-sm text-gray-700 dark:text-gray-400 line-clamp-2">
           {{ props.projectDescription }}
         </p>
         <button
           @click="goToDetail(props.projectId)"
-          class="flex w-full justify-center items-center px-5 py-2 font-bold bg-primary_light text-surface_light border-2 border-primary_light rounded-full transition ease-in hover:bg-surface_light hover:text-primary_light dark:bg-primary_dark dark:border-primary_dark dark:hover:bg-surface_dark"
+          class="overflow-hidden flex w-full items-center h-10 p-1 bg-slate-300 dark:bg-gray-800 rounded-full group"
         >
-          <i class="bi bi-box-arrow-up-right mr-2"></i>
-          Read more
+          <div
+            class="button-card px-3 h-8 rounded-full bg-secondary_light dark:bg-secondary_dark text-primary_light dark:text-primary_dark flex justify-center items-center group-hover:btn-shadow transition"
+          >
+            Read more...
+          </div>
         </button>
       </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+/* .button-card:hover {
+  box-shadow: 0 0 5px 3px #4CB9E7;
+} */
+
+/* .button-card:active {
+  box-shadow: 0 0 5px 3px #FF9B50;
+} */
+</style>

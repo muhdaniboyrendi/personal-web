@@ -44,9 +44,16 @@ const projectStore = useProjectStore();
     </div>
 
     <div class="w-full mt-6 flex justify-center">
-      <RouterLink to="/projects" class="w-full flex justify-center items-center px-5 py-2 font-bold bg-gradient-to-b from-surface_light to-secondary_light shadow-md text-text_primary_light rounded-full ease-in hover:shadow-lg dark:from-surface_dark dark:to-secondary_dark dark:text-text_primary_dark transition border border-border_light hover:border-gray-300 dark:border-border_dark dark:hover:border-gray-500">
-        <i class="bi bi-box-arrow-up-right mr-2"></i>
-        View all projects
+      <RouterLink
+        to="/projects"
+        class="overflow-hidden flex w-full items-center p-1 bg-slate-300 dark:bg-gray-800 rounded-full group"
+      >
+        <div
+          class="button-card py-1.5 px-3 rounded-full bg-secondary_light dark:bg-secondary_dark text-primary_light dark:text-primary_dark flex justify-center items-center group-hover:btn-shadow transition"
+        >
+          <i class="bi bi-box-arrow-up-right mr-2"></i>
+          View all projects
+        </div>
       </RouterLink>
     </div>
   </section>
