@@ -52,7 +52,7 @@ const goToDetail = (project) => {
         >
           <button
             @click="goToDetail(props.projectId)"
-            class="button-card px-3 h-8 rounded-full bg-secondary_light dark:bg-secondary_dark text-primary_light dark:text-primary_dark flex justify-center items-center group-hover:btn-shadow transition"
+            class="button-card px-3 h-8 rounded-full bg-secondary_light dark:bg-secondary_dark text-primary_light dark:text-primary_dark flex justify-center items-center group-hover:btn-shadow transition duration-500"
           >
             Read more...
           </button>

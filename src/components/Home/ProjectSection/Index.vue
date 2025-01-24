@@ -45,11 +45,11 @@ const projectStore = useProjectStore();
 
     <div class="w-full mt-6 flex justify-center">
       <div
-        class="overflow-hidden flex w-full items-center p-1 bg-slate-300 dark:bg-gray-800 rounded-full group"
+        class="overflow-hidden flex w-full justify-center items-center p-1 bg-slate-300 dark:bg-gray-800 rounded-full group"
       >
         <RouterLink
           to="/projects"
-          class="button-card py-1.5 px-3 rounded-full bg-secondary_light dark:bg-secondary_dark text-primary_light dark:text-primary_dark flex justify-center items-center group-hover:btn-shadow transition"
+          class="button-card py-1.5 px-3 rounded-full bg-secondary_light dark:bg-secondary_dark text-primary_light dark:text-primary_dark flex justify-center items-center group-hover:btn-shadow transition duration-500"
         >
           <i class="bi bi-box-arrow-up-right mr-2"></i>
           View all projects

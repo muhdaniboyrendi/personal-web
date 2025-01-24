@@ -3,22 +3,22 @@
 
 <template>
   <div class="w-full">
-    <div class="p-5 rounded-[2rem] border border-slate-300 dark:border-slate-700 hover:shadow-lg hover:shadow-slate-400 dark:hover:shadow-slate-700 transition duration-500">
+    <div class="p-5 rounded-[2rem] bg-gradient-to-b from-surface_light to-secondary_light dark:from-surface_dark dark:to-secondary_dark shadow-md hover:shadow-lg transition">
 
       <div>
-        <h3 class="text-slate-700 dark:text-slate-300 text-2xl font-bold">Software</h3>
+        <h3 class="text-text_primary_light dark:text-text_primary_dark text-lg font-bold">Software</h3>
       </div>
 
-      <div class="mt-5 text-slate-700 dark:text-slate-300">
+      <div class="mt-3 text-text_secondary_light dark:text-text_secondary_dark text-sm">
         <ul>
-          <li><span class="text-slate-800 dark:text-slate-200">• Editor :</span> Visual Studio Code</li>
-          <li><span class="text-slate-800 dark:text-slate-200">• Database Viewer :</span> TablePlus</li>
-          <li><span class="text-slate-800 dark:text-slate-200">• Rest API Tester :</span> Postman</li>
-          <li><span class="text-slate-800 dark:text-slate-200">• Others :</span>
+          <li class="mb-1"><span class="text-text_primary_light dark:text-text_primary_dark">• Editor :</span> Visual Studio Code</li>
+          <li class="mb-1"><span class="text-text_primary_light dark:text-text_primary_dark">• Database Viewer :</span> TablePlus</li>
+          <li class="mb-1"><span class="text-text_primary_light dark:text-text_primary_dark">• Rest API Tester :</span> Postman</li>
+          <li class="mb-1"><span class="text-text_primary_light dark:text-text_primary_dark">• Others :</span>
             <ul class="ml-3">
-              <li>• Git</li>
-              <li>• Herd</li>
-              <li>• Laragon</li>
+              <li class="mb-1">• Git</li>
+              <li class="mb-1">• Herd</li>
+              <li class="mb-1">• Laragon</li>
             </ul>
           </li>
         </ul>
@@ -28,28 +28,28 @@
   </div>
 
   <div class="w-full">
-    <div class="p-5 rounded-[2rem] border border-slate-300 dark:border-slate-700 hover:shadow-lg hover:shadow-slate-400 dark:hover:shadow-slate-700 transition duration-500">
+    <div class="p-5 rounded-[2rem] bg-gradient-to-b from-surface_light to-secondary_light dark:from-surface_dark dark:to-secondary_dark shadow-md hover:shadow-lg transition">
 
       <div>
-        <h3 class="text-slate-700 dark:text-slate-300 text-2xl font-bold">Hardware</h3>
+        <h3 class="text-text_primary_light dark:text-text_primary_dark text-lg font-bold">Hardware</h3>
       </div>
 
-      <div class="mt-5 text-slate-700 dark:text-slate-300">
+      <div class="mt-3 text-text_secondary_light dark:text-text_secondary_dark text-sm">
         <ul>
-          <li><span class="text-slate-800 dark:text-slate-200">• Laptop :</span> Lenovo Thinkpad X1 Carbon</li>
-          <li><span class="text-slate-800 dark:text-slate-200">• Specs :</span>
+          <li class="mb-1"><span class="text-text_primary_light dark:text-text_primary_dark">• Laptop :</span> Lenovo Thinkpad X1 Carbon</li>
+          <li class="mb-1"><span class="text-text_primary_light dark:text-text_primary_dark">• Specs :</span>
             <ul class="ml-3">
-              <li><span class="text-slate-800 dark:text-slate-200">• OS :</span> Windows 11 Pro</li>
-              <li><span class="text-slate-800 dark:text-slate-200">• Processor :</span> Intel Core i5-8265U</li>
-              <li><span class="text-slate-800 dark:text-slate-200">• RAM :</span> 8 GB</li>
-              <li><span class="text-slate-800 dark:text-slate-200">• Storage :</span> NVMe 256 GB</li>
+              <li class="mb-1"><span class="text-text_primary_light dark:text-text_primary_dark">• OS :</span> Windows 11 Pro</li>
+              <li class="mb-1"><span class="text-text_primary_light dark:text-text_primary_dark">• Processor :</span> Intel Core i5-8265U</li>
+              <li class="mb-1"><span class="text-text_primary_light dark:text-text_primary_dark">• RAM :</span> 8 GB</li>
+              <li class="mb-1"><span class="text-text_primary_light dark:text-text_primary_dark">• Storage :</span> NVMe 256 GB</li>
             </ul>
           </li>
-          <li><span class="text-slate-800 dark:text-slate-200">• Keyboard :</span> Rexus Legionare MX 5.1</li>
-          <li><span class="text-slate-800 dark:text-slate-200">• Mouse :</span> Logitech M100r</li>
-          <li><span class="text-slate-800 dark:text-slate-200">• Deskmat :</span> Orico</li>
-          <li><span class="text-slate-800 dark:text-slate-200">• TWS :</span> Realme Buds T100</li>
-          <li><span class="text-slate-800 dark:text-slate-200">• Phone :</span> Samsung Galaxy A35</li>
+          <li class="mb-1"><span class="text-text_primary_light dark:text-text_primary_dark">• Keyboard :</span> Rexus Legionare MX 5.1</li>
+          <li class="mb-1"><span class="text-text_primary_light dark:text-text_primary_dark">• Mouse :</span> Logitech M100r</li>
+          <li class="mb-1"><span class="text-text_primary_light dark:text-text_primary_dark">• Deskmat :</span> Orico</li>
+          <li class="mb-1"><span class="text-text_primary_light dark:text-text_primary_dark">• TWS :</span> Realme Buds T100</li>
+          <li class="mb-1"><span class="text-text_primary_light dark:text-text_primary_dark">• Phone :</span> Samsung Galaxy A35</li>
         </ul>
       </div>
 

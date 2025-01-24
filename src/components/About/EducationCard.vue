@@ -2,7 +2,7 @@
   <div class="w-full">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
       <div
-        class="p-5 rounded-[2rem] shadow-md hover:shadow-lg bg-gradient-to-b from-surface_light to-secondary_light dark:from-surface_dark dark:to-secondary_dark transition duration-500"
+        class="p-5 rounded-[2rem] shadow-md hover:shadow-lg bg-gradient-to-b from-surface_light to-secondary_light dark:from-surface_dark dark:to-secondary_dark transition group"
       >
         <div class="flex justify-between">
           <h3
@@ -37,12 +37,12 @@
         </div>
 
         <div
-          class="overflow-hidden flex w-full items-center h-10 p-1 bg-slate-300 dark:bg-gray-800 rounded-full group"
+          class="overflow-hidden flex w-full items-center h-10 p-1 bg-slate-300 dark:bg-gray-800 rounded-full"
         >
           <a
             href="https://smkn2kra.sch.id/"
             target="_blank"
-            class="button-card px-3 h-8 rounded-full bg-secondary_light dark:bg-secondary_dark text-primary_light dark:text-primary_dark flex justify-center items-center group-hover:btn-shadow transition"
+            class="button-card px-3 h-8 rounded-full bg-secondary_light dark:bg-secondary_dark text-primary_light dark:text-primary_dark flex justify-center items-center group-hover:btn-shadow transition duration-500"
           >
             <i class="bi bi-box-arrow-up-right mr-2"></i>
             Visit
