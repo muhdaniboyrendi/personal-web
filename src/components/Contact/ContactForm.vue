@@ -83,11 +83,11 @@ const handleSubmit = async () => {
 
     <div
       class="overflow-hidden flex w-full items-center justify-center p-1 bg-slate-300 dark:bg-gray-800 rounded-full"
+      :class="{ hidden: isLoading }"
     >
       <button
         type="submit"
         class="button-card px-10 py-2 rounded-full bg-secondary_light dark:bg-secondary_dark text-primary_light dark:text-primary_dark flex justify-center items-center group-hover:btn-shadow transition duration-500"
-        :class="{ hidden: isLoading }"
       >
         <i class="bi bi-send-fill mr-2"></i>
         Send
@@ -95,11 +95,13 @@ const handleSubmit = async () => {
     </div>
 
     <div
-      class="overflow-hidden flex w-full items-center justify-center p-1 bg-slate-300 dark:bg-gray-800 rounded-full" :class="{ hidden: !isLoading }"
+      class="overflow-hidden flex w-full items-center justify-center p-1 bg-slate-300 dark:bg-gray-800 rounded-full"
+      :class="{ hidden: !isLoading }"
     >
       <button
         type="submit"
-        class="button-card px-10 py-2 rounded-full bg-secondary_light dark:bg-secondary_dark text-primary_light dark:text-primary_dark flex justify-center items-center group-hover:btn-shadow transition duration-500" disabled
+        class="button-card px-10 py-2 rounded-full bg-secondary_light dark:bg-secondary_dark text-primary_light dark:text-primary_dark flex justify-center items-center group-hover:btn-shadow transition duration-500"
+        disabled
       >
         <svg
           aria-hidden="true"

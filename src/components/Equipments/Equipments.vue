@@ -4,7 +4,7 @@ import EquipmentCard from './EquipmentCard.vue';
 </script>
 
 <template>
-  <section class="pt-20 py-28">
+  <section class="pt-20">
     <div class="flex flex-wrap py-4 mx-auto max-w-screen-xl lg:py-4">
 
       <div class="w-full mb-5">
