@@ -49,7 +49,7 @@ const projectStore = useProjectStore();
       >
         <RouterLink
           to="/projects"
-          class="button-card py-1.5 px-3 rounded-full bg-secondary_light dark:bg-secondary_dark text-primary_light dark:text-primary_dark flex justify-center items-center group-hover:btn-shadow transition duration-500"
+          class="button-card py-1.5 px-10 rounded-full bg-secondary_light dark:bg-secondary_dark text-primary_light dark:text-primary_dark flex justify-center items-center group-hover:btn-shadow transition duration-500"
         >
           <i class="bi bi-box-arrow-up-right mr-2"></i>
           View all projects

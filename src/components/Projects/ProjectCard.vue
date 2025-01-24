@@ -42,17 +42,12 @@ const goToDetail = (project) => {
         >
           {{ props.projectTitle }}
         </h5>
-        <p
-          class="mb-5 font-light text-sm text-gray-700 dark:text-gray-400 line-clamp-2"
-        >
-          {{ props.projectDescription }}
-        </p>
         <div
-          class="overflow-hidden flex w-full items-center h-10 p-1 bg-slate-300 dark:bg-gray-800 rounded-full group"
+          class="overflow-hidden flex w-full items-center p-1 bg-slate-300 dark:bg-gray-800 rounded-full group"
         >
           <button
             @click="goToDetail(props.projectId)"
-            class="button-card px-3 h-8 rounded-full bg-secondary_light dark:bg-secondary_dark text-primary_light dark:text-primary_dark flex justify-center items-center group-hover:btn-shadow transition duration-500"
+            class="button-card px-5 py-1 rounded-full bg-secondary_light dark:bg-secondary_dark text-primary_light dark:text-primary_dark flex justify-center items-center group-hover:btn-shadow transition duration-500"
           >
             Read more...
           </button>
