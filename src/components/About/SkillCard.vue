@@ -7,7 +7,7 @@ const props = defineProps(["title", "data"]);
     class="p-5 rounded-[2rem] shadow-md bg-gradient-to-b from-surface_light to-secondary_light dark:from-surface_dark dark:to-secondary_dark hover:shadow-lg transition duration-500"
   >
     <h4
-      class="text-text_primary_light dark:text-text_primary_dark md:text-lg font-bold"
+      class="text-text_primary_light dark:text-text_primary_dark text-base md:text-lg font-bold"
     >
       {{ props.title }}
     </h4>

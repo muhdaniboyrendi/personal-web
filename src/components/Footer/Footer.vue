@@ -5,7 +5,8 @@
       <a href="https://github.com/muhdaniboyrendi/personal-web" target="_blank" class="text-xs text-text_primary_light dark:text-text_primary_dark hover:text-accent dark:hover:text-accent hover:underline transition">/source</a>
     </div>
     <div class="mx-auto max-w-screen-xl text-center">
-      <span class="text-xs text-text_secondary_light sm:text-center dark:text-text_secondary_dark">© 2024 Muhdani Boyrendi Erlan Azhari. Made with <a href="https://vuejs.org" target="_blank" class="text-green-600 hover:underline">Vue JS</a> and <a href="https://tailwindcss.com" target="_blank" class="text-sky-500 hover:underline">Tailwind CSS</a></span>
+      <p class="text-xs text-text_secondary_light dark:text-text_secondary_dark mb-3">© 2025 by Muhdani Boyrendi Erlan Azhari</p>
+      <p class="text-xs text-text_secondary_light dark:text-text_secondary_dark"> Powered by <a href="https://vuejs.org" target="_blank" class="text-green-600 hover:underline">Vue JS</a> and <a href="https://tailwindcss.com" target="_blank" class="text-sky-500 hover:underline">Tailwind CSS</a></p>
     </div>
   </footer>
 </template>

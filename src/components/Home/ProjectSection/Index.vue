@@ -1,6 +1,6 @@
 <script setup>
 import { useProjectStore } from "@/stores/projectStore";
-import ProjectCard from "./ProjectCard.vue";
+import ProjectCard from "@/components/Projects/ProjectCard.vue";
 
 const projectStore = useProjectStore();
 </script>
@@ -44,17 +44,17 @@ const projectStore = useProjectStore();
     </div>
 
     <div class="w-full mt-6 flex justify-center">
-      <RouterLink
-        to="/projects"
+      <div
         class="overflow-hidden flex w-full items-center p-1 bg-slate-300 dark:bg-gray-800 rounded-full group"
       >
-        <div
+        <RouterLink
+          to="/projects"
           class="button-card py-1.5 px-3 rounded-full bg-secondary_light dark:bg-secondary_dark text-primary_light dark:text-primary_dark flex justify-center items-center group-hover:btn-shadow transition"
         >
           <i class="bi bi-box-arrow-up-right mr-2"></i>
           View all projects
-        </div>
-      </RouterLink>
+        </RouterLink>
+      </div>
     </div>
   </section>
 </template>
