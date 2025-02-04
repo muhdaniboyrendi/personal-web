@@ -41,6 +41,13 @@ const router = createRouter({
       meta: { title: "Muhdani Boyrendi Erlan Azhari | Contact" },
     },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    }
+
+    return { top: 0 };
+  },
 });
 
 export default router
